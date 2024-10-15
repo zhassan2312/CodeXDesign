@@ -1,0 +1,10 @@
+const heroSectionText=["We Create","Eye-Catching","Interfaces"];
+const navBarLinks=['Services', 'Our Work', 'About Us', 'Insights', 'Contact'];
+const heroSectionText1=['For public and private companies','From the first pitch to IPO'];
+const marqueeText="I am Zohaib Hassan";
+const aboutText1="CodeXDesign is a design & development agency with team of web developers, UX/UI designers, and sales expert who helps forward-thinking businesses raise funds, sell products, explain complex ideas, and hire top talent through strategic digital solutions. His expertise in creating engaging web experiences and effective design strategies enables businesses to communicate their value clearly and achieve their goals.";
+const aboutExpect="What you can expect:";
+const aboutText2="We create professional interfaces .";
+const aboutText3="We believe in the power of design to elevate brands, engage customers, and drive results.";
+const socialMediaLinks=['S:','Facebook', 'Twitter', 'Instagram', 'LinkedIn', 'Behance'];
+export {heroSectionText,heroSectionText1,navBarLinks,marqueeText,aboutText1,aboutText2,aboutText3,socialMediaLinks,aboutExpect};
