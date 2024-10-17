@@ -3,6 +3,7 @@ import { logo1 } from '../../utils/index';
 import { navBarLinks } from '../../constants';
 import { MdMenu } from 'react-icons/md';
 import Dropdown from './Dropdown';
+import Link from './Link';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -19,9 +20,9 @@ const Navbar = () => {
 
       <div className='hidden md:flex links'>
         {navBarLinks.map((link, index) => (
-          <a key={index} href='#' className={`text-md capitalize font-regular mx-4 ${index === 4 ? 'ml-[16vw]' : ''}`}>
-            {link}
-          </a>
+          
+          <Link isNavbar={true} text={link} href={'#'} className={`text-md capitalize font-regular mx-4 ${index === 4 ? 'ml-[16vw]' : ''}`}>
+                    </Link>
         ))}
       </div>
 
