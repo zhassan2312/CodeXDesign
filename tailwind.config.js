@@ -10,6 +10,7 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         grotesk: ['Schibsted Grotesk', 'sans-serif'],
       },
+      
     },
   },
   plugins: [],

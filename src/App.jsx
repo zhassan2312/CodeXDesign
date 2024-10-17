@@ -1,9 +1,13 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import LandingPage from './components/LandingPage'
 import Marquee from './components/Marquee'
 import About from './components/About'
-import Eye from './components/Eye'
+import EyeSection from './components/Eye/EyeSection'
+import Featured from './components/Featured/Featured'
+import Client from './components/Client/Client'
+import Project from './components/Project'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -12,7 +16,11 @@ const App = () => {
       <LandingPage />
       <Marquee />
       <About />
-      <Eye />
+      <EyeSection />
+      <Featured />
+      <Client />
+      <Project />
+      <Footer />
     </div>
   )
 }
