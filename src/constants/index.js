@@ -6,9 +6,9 @@ const aboutText1="CodeXDesign is a design & development agency with team of web 
 const aboutExpect="What you can expect:";
 const aboutText2="We create professional interfaces that are easy to use, visually appealing, and drive results. Our team of web developers, UX/UI designers, and sales experts work together to create engaging web experiences that help businesses communicate their value clearly and achieve their goals.";
 const aboutText3="We believe in the power of design to elevate brands, engage customers, and drive results. Our team of web developers, UX/UI designers, and sales experts work together to create engaging web experiences that help businesses communicate their value clearly and achieve their goals.";
-const socialMediaLinks=['S:','Facebook', 'Twitter', 'Instagram', 'LinkedIn', 'Behance'];
-const address=['L:','NUST CEME', 'Near Daewoo Terminal'];
-const mail=['E:','zhassan2312@gmail.com'];
+const socialMediaLinks=['Facebook', 'Twitter', 'Instagram', 'LinkedIn', 'Behance'];
+const address=['NUST CEME', 'Near Daewoo Terminal'];
+const mail=['zhassan2312@gmail.com'];
 const address1=['Main Peshaawar Road', 'Rawalpindi, Pakistan'];
 const testimonialText="CodexDesign did an outstanding job redesigning our platform's interface, blending creativity with functionality flawlessly. Their attention to detail and user-centric approach elevated the entire user experience. We're beyond impressed with the results and highly recommend their design expertise.";
 export {heroSectionText,heroSectionText1,navBarLinks,marqueeText,aboutText1,aboutText2,aboutText3,socialMediaLinks,aboutExpect,testimonialText,address,address1,mail};

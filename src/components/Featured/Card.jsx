@@ -25,28 +25,28 @@ const Card = ({ image, text, types, left }) => {
 
   return (
     <div
-      className='cardContainer relative w-full md:w-1/2 py-6'
+      className='cardContainer relative w-full lg:w-1/2 py-6 lg:py-[1vw]'
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       <h1
         ref={h1Ref}
-        className={`overflow-hidden text-[#CDEA68] uppercase font-bold absolute ${left ? 'left-full -translate-x-1/2' : 'right-full translate-x-1/2'} leading-none top-1/2 -translate-y-1/2 font-grotesk text-[8vw] z-10 text-nowrap`}
+        className={`overflow-hidden text-[#CDEA68] uppercase font-bold absolute ${left ? 'left-1/2 -translate-x-1/2 lg:left-full lg:-translate-x-1/2 ' : 'right-1/2 translate-x-1/2 lg:right-full lg:translate-x-1/2'} leading-none top-1/2 -translate-y-1/2 font-grotesk text-[8vw] z-10 text-nowrap`}
       >
         {text.split('').map((letter, index) => (
           <span key={index} className="inline-block">{letter}</span>
         ))}
       </h1>
-      <div className='card w-full h-full flex flex-col gap-5 overflow-hidden'>
-        <div className='flex gap-5 items-center'>
-          <div className='rounded-full h-3 w-3 bg-zinc-100'></div>
-          <p className='font-grotesk text-xl tracking-tight'>
+      <div className='card w-full h-full flex flex-col gap-5 lg:gap-[1.2vw]  overflow-hidden'>
+        <div className='flex gap-5 lg:gap-[1.2vw] items-center'>
+          <div className='rounded-full h-3 w-3 lg:w-[0.8vw] lg:h-[0.8vw] bg-zinc-100'></div>
+          <p className='font-grotesk text-xl lg:text-[1vw] tracking-tight'>
             {text}
           </p>
         </div>
         <img
           src={image}
-          className={`rounded-2xl h-[50vh] md:h-[70vh] object-cover transition-transform ease-linear duration-300 ${hover ? 'transform scale-95' : 'transform scale-100'}`}
+          className={`rounded-2xl lg:rounded-[1.5vw] h-[50vh] lg:h-[70vh] object-cover transition-transform ease-linear duration-300 ${hover ? 'transform scale-95' : 'transform scale-100'}`}
           alt={text}
         />
         <Types types={types}/>

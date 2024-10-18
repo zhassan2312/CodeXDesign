@@ -13,21 +13,22 @@ const Navbar = () => {
   };
 
   return (
-    <div className='fixed z-[1000] w-full px-20 py-8 font-poppins flex justify-between items-center'>
+    <div className='fixed z-[1000] w-full px-[3vw] py-4 lg:py-[2vw] font-poppins flex justify-between items-center bg-white bg-opacity-0 backdrop-filter backdrop-blur-lg'>
       <div className='logo'>
-        <img src={logo1} alt="Logo" width={120}/>
+        <img src={logo1} alt="Logo" className='w-[8vw]'/>
       </div>
 
-      <div className='hidden md:flex links'>
-        {navBarLinks.map((link, index) => (
-          
-          <Link isNavbar={true} text={link} href={'#'} className={`text-md capitalize font-regular mx-4 ${index === 4 ? 'ml-[16vw]' : ''}`}>
-                    </Link>
-        ))}
+      <div className='hidden lg:flex links'>
+        {
+          navBarLinks.map((link, index) => 
+          (
+            <Link key={index} isNavbar={true} text={link} href={'#'} className={`font-regular mx-[2vw] ${index === 4 ? 'ml-[16vw]' : ''}`}></Link>
+          ))
+        }
       </div>
 
-      <div className='md:hidden'>
-        <MdMenu className='text-3xl cursor-pointer' onClick={toggleDropdown} />
+      <div className='lg:hidden'>
+        <MdMenu className='text-[5vw] cursor-pointer' onClick={toggleDropdown} />
       </div>
 
       <Dropdown isOpen={isDropdownOpen} onClose={toggleDropdown} />

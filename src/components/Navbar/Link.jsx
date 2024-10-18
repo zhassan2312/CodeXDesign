@@ -1,19 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-const Link = ({ text, className, href, onClick, isNavbar }) => {
+const Link = ({ isBlack, text, className, href, onClick, isNavbar }) => {
   const [hover, setHover] = useState(false);
   const underlineRef = useRef(null);
   const textFlipRef = useRef(null);
   const timelineRef = useRef(null);
 
   useEffect(() => {
-    if (underlineRef.current === null) return; // Ensure ref is properly assigned
+    if (underlineRef.current === null || textFlipRef.current === null) return; // Ensure refs are properly assigned
 
     // Kill the existing timeline to prevent overlap
     if (timelineRef.current) {
       timelineRef.current.kill();
     }
+
+    const textWidth = textFlipRef.current.offsetWidth; // Get the width of the text element
 
     if (hover) {
       // Create a new timeline for the hover effect
@@ -30,7 +32,7 @@ const Link = ({ text, className, href, onClick, isNavbar }) => {
       .fromTo(
         underlineRef.current, 
         { width: '0%', left: '0%' }, 
-        { width: '100%', duration: 0.15, ease: 'power2.out' }
+        { width: `${textWidth}px`, duration: 0.15, ease: 'power2.out' }
       )
       .to(
         underlineRef.current, 
@@ -51,7 +53,7 @@ const Link = ({ text, className, href, onClick, isNavbar }) => {
       .fromTo(
         underlineRef.current, 
         { width: '0%', left: '0%' }, 
-        { width: '100%', duration: 0.15, ease: 'power2.out' }
+        { width: `${textWidth}px`, duration: 0.15, ease: 'power2.out' }
       );
 
       timelineRef.current = tl;
@@ -74,14 +76,16 @@ const Link = ({ text, className, href, onClick, isNavbar }) => {
   }, [hover]); // Trigger useEffect only when hover state changes
 
   useEffect(() => {
+    const flipDistance = window.innerWidth >= 1920 ? 40 : 20; // Adjust flip distance for larger screens
+
     if (hover && isNavbar) {
       gsap.to(textFlipRef.current, {
-        y: -20,
+        y: -flipDistance,
         duration: 0.4,
         ease: 'power2.in',
         onComplete: () => {
           gsap.fromTo(textFlipRef.current, {
-            y: 20,
+            y: flipDistance,
           }, {
             y: 0,
             duration: 0.4,
@@ -91,12 +95,12 @@ const Link = ({ text, className, href, onClick, isNavbar }) => {
       });
     } else if (!hover && isNavbar) {
       gsap.to(textFlipRef.current, {
-        y: 20,
+        y: flipDistance,
         duration: 0.4,
         ease: 'power2.in',
         onComplete: () => {
           gsap.fromTo(textFlipRef.current, {
-            y: -20,
+            y: -flipDistance,
           }, {
             y: 0,
             duration: 0.4,
@@ -110,16 +114,15 @@ const Link = ({ text, className, href, onClick, isNavbar }) => {
   return (
     <a
       href={href}
-      className={`${className} relative overflow-hidden`}
+      className={`${className} cursor-pointer relative leading-none text-md lg:text-[1vw] xl:text-[1vw] overflow-hidden`}  // Base styles
       onClick={onClick}
       onMouseEnter={() => setHover(true)}   // Hover in
       onMouseLeave={() => setHover(false)}  // Hover out
     >
-      <span ref={textFlipRef} style={{ display: 'inline-block' }}>{text}</span>
+      <span ref={textFlipRef} className='leading-none inline-block'>{text}</span>
       <span
         ref={underlineRef}
-        className="absolute bottom-0 left-0 h-[2px] bg-white w-0"  // Initial style
-        style={{ display: 'block', position: 'absolute', height: '2px', backgroundColor: 'white' }}
+        className={`absolute bottom-0 left-0 h-[2px] ${isBlack ? 'bg-black' : 'bg-white'} w-0`}  // Initial style
       ></span>
     </a>
   );
