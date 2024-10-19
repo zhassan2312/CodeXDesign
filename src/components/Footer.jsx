@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <div 
       data-scroll
-      data-scroll-speed='2'
+      data-scroll-speed='0.6'
       data-scroll-position='start,start'
-      data-scroll-offset='-210%,0'
-      className="w-full bg-zinc-100 flex font-poppins justify-between items-start px-[3vw] py-[4vw] -mb-[50%] text-black"
+      data-scroll-offset='-30%,0'
+      className="-mt-[23%] -mb-[22%] w-full bg-zinc-100 flex font-poppins justify-between items-start px-[3vw] py-[4vw] text-black"
     >
       <div className='box1 flex flex-col justify-between items-start h-full'>
         <h1 className='font-poppins leading-none font-bold text-[4vw] lg:text-[6vw] tracking-tighter uppercase'>

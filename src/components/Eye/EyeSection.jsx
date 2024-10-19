@@ -8,7 +8,7 @@ const EyeSection = () => {
       data-scroll-speed='-0.6'
       data-scroll-offset='-40%,-40%'
     
-      className='w-full h-screen -mt-[20%] eyes overflow-hidden z-10'>
+      className='w-full h-screen -mt-[20%] mb-[10%] eyes overflow-hidden z-10'>
       <div
         data-scroll 
         data-scroll-section 
@@ -22,7 +22,7 @@ const EyeSection = () => {
       >
         <Eye
            // Fast scroll speed
-          isPlay={true} />
+          isPlay={true} isClass={true} className={'absolute top-[35%]  left-[35%] -translate-x-1/2 -translate-y-1/2 flex gap-[2vw]'} />
       </div>
     </div>
   );
