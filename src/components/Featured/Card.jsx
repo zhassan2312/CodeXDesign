@@ -46,7 +46,7 @@ const Card = ({ image, text, types, left }) => {
         </div>
         <img
           src={image}
-          className={`rounded-2xl lg:rounded-[1.5vw] h-[50vh] lg:h-[70vh] object-cover transition-transform ease-linear duration-300 ${hover ? 'transform scale-95' : 'transform scale-100'}`}
+          className={`rounded-2xl lg:rounded-[1.5vw] h-[80vh] md:h-[50vh]  lg:h-[70vh] object-cover transition-transform ease-linear duration-300 ${hover ? 'transform scale-95' : 'transform scale-100'}`}
           alt={text}
         />
         <Types types={types}/>

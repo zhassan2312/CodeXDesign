@@ -6,7 +6,13 @@ import Button from '../buttons/Button';
 const Featured = () => {
     const [hover, setHover] = useState(false);
   return (
-    <div className='w-full py-20 lg:py-[3vw] flex flex-col '>
+    <div 
+    data-scroll
+    data-scroll-offset='0,-10%'
+    
+
+    
+      className='w-full py-20 lg:py-[3vw] flex flex-col z-40 relative bg-zinc-900'>
       <div className='w-full px-20 lg:px-[3vw]'>
         <h1 className='font-poppins text-[5vw] tracking-tight'>
           Featured

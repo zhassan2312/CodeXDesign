@@ -27,7 +27,11 @@ const Eye = ({isPlay,isClass,className}) => {
     };
   }, []);
   return (
-    <div className={`${isClass ? className:'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-[2vw]'} `}>
+    <div 
+      data-scroll
+          data-scroll-speed='0.1'
+
+    className={`${isClass ? className:'absolute top-[35%]  left-[35%] -translate-x-1/2 -translate-y-1/2 flex gap-[2vw]'} `}>
           <div className='flex items-center justify-center w-[15vw] h-[15vw] rounded-full bg-zinc-100'>
             <div className='relative w-3/5 h-3/5 rounded-full bg-zinc-900 blackBox'>
               <div

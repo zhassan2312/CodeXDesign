@@ -44,7 +44,7 @@ const MiniButton = ({ text,className}) => {
         ref={circleRef}
         className="absolute rounded-full inset-0 bg-white transform scale-y-0"
       ></div>
-      <span ref={textRef} className="relative z-10 text-sm lg:text-[1vw]">{text}</span>
+      <span ref={textRef} className="relative text-sm lg:text-[1vw]">{text}</span>
     </div>
   );
 };

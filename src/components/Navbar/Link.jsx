@@ -119,7 +119,7 @@ const Link = ({ isBlack, text, className, href, onClick, isNavbar }) => {
       onMouseEnter={() => setHover(true)}   // Hover in
       onMouseLeave={() => setHover(false)}  // Hover out
     >
-      <span ref={textFlipRef} className='leading-none inline-block'>{text}</span>
+      <span ref={textFlipRef} className='leading-none pb-[0.2vw] inline-block'>{text}</span>
       <span
         ref={underlineRef}
         className={`absolute bottom-0 left-0 h-[2px] ${isBlack ? 'bg-black' : 'bg-white'} w-0`}  // Initial style

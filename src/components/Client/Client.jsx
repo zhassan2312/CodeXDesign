@@ -9,7 +9,9 @@ const Client = () => {
     setExpandedIndex(expandedIndex === index ? -1 : index);
   };
   return (
-    <div className='w-full bg-zinc-900 mb-[6vw]'>
+    <div
+   
+      className='w-full bg-zinc-900 mb-[6vw]'>
         <div className='flex flex-col w-full gap-[3vw]'>
             <h1 className='text-[4vw] text-white font-poppins px-[3vw]'>
                 Client's Reviews
