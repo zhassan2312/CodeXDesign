@@ -10,7 +10,6 @@ import Project from './components/Project';
 import Footer from './components/Footer';
 
 import LocomotiveScroll from 'locomotive-scroll';
-import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 const App = () => {
  
