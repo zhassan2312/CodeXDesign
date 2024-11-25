@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { MdArrowOutward } from 'react-icons/md';
 
-const OutlineButton = ({ text, className }) => {
+const OutlineButton = ({onClick,href, text, className }) => {
   const [hover, setHover] = useState(false);
   const buttonRef = useRef(null);
   const iconRef = useRef(null);
@@ -77,7 +77,9 @@ const OutlineButton = ({ text, className }) => {
 
   return (
     <a
-      href="#"
+    href={href}
+    target='_blank'
+    onClick={onClick}
       ref={buttonRef}
       className={`${className} relative flex gap-5 items-center border-2 border-black text-black rounded-full justify-center overflow-hidden ${className}`}
       onMouseEnter={handleHover(true)}

@@ -44,7 +44,7 @@ const Navbar = () => {
   }, [isVisible]);
 
   return (
-    <div className='navbar fixed z-[1000] w-full px-[3vw] py-4 lg:py-[2vw] bg-white bg-opacity-0 backdrop-filter backdrop-blur-lg'>
+    <div className='navbar fixed z-[1000] w-full px-[3vw] py-[1vw] lg:py-[2vw] bg-white bg-opacity-0 backdrop-filter backdrop-blur-lg'>
       {/* Navbar content aligned with flexbox */}
       <div className='flex justify-between items-center'>
         {/* Logo at the leftmost side */}

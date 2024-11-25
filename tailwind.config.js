@@ -10,9 +10,14 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         grotesk: ['Schibsted Grotesk', 'sans-serif'],
       },
+      spacing: {
+        '15': '60px', // Height 60px
+        '70': '280px', // Width 280px
+      },
       
     },
   },
+  variants: {},
   plugins: [],
 }
 

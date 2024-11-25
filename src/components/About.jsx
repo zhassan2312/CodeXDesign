@@ -5,7 +5,6 @@ import { myImage } from '../utils/index.js';
 import Link from './Navbar/Link.jsx';
 
 const About = () => {
-  const target =document.querySelector('marquee');
   return (
     <div 
       data-scroll
@@ -39,9 +38,9 @@ const About = () => {
       <div className='w-full aboutEndSection mx-[3vw] flex flex-col md:flex-row items-start justify-between gap-8 overflow-hidden'>
         <div className='flex flex-col items-start w-auto'>
           <h1 className='text-[3vw] mb-5 lg:mb-[1vw]'>
-            Our approach:
+            My approach:
           </h1>
-          <Button className={'pl-8 pr-16 lg:pl-[2vw] lg:pr-[4vw] py-[1vw]'} text={'Read More'} isWhite={false} />
+          <Button onClick={''} className={'pl-8 pr-16 lg:pl-[2vw] lg:pr-[4vw] py-[1vw]'} text={'See More'} isWhite={false} />
         </div>
         <img src={myImage} className='w-[93vw] md:w-1/2 h-[70vh] rounded-3xl md:mr-[6vw] fill object-cover overflow-hidden' alt="About" />
       </div>

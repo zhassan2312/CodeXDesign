@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-const MiniButton = ({ text,className}) => {
+const MiniButton = ({onClick, text,className}) => {
   const [hover, setHover] = useState(false);
   const circleRef = useRef(null);
   const textRef = useRef(null);
@@ -36,9 +36,10 @@ const MiniButton = ({ text,className}) => {
 
   return (
     <div 
-      className={`${className} relative border-[1px] lg:border-[0.1vw] border-white font-light uppercase rounded-full overflow-hidden`}
+      className={`${className} relative cursor-pointer border-[1px] lg:border-[0.1vw] border-white font-light uppercase rounded-full overflow-hidden`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => window.open(onClick, '_blank')}
     >
       <div 
         ref={circleRef}

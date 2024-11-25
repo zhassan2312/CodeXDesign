@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { MdArrowOutward } from 'react-icons/md';
 
-const Button = ({ text, isWhite, className }) => {
+const Button = ({href,onClick, text, isWhite, className }) => {
   const [hover, setHover] = useState(false);
   const buttonRef = useRef(null);
   const iconRef = useRef(null);
@@ -57,7 +57,9 @@ const Button = ({ text, isWhite, className }) => {
 
   return (
     <a
-      href=""
+      href={href}
+      target='_blank'
+      onClick={onClick}
       ref={buttonRef}
       className={`flex gap-5 items-center ${className} ${isWhite ? 'bg-white text-zinc-900' : 'bg-zinc-900 text-white'} rounded-full justify-center relative bg-[length:100%_200%] bg-[position:0%_100%]`}
     >
