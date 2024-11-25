@@ -25,7 +25,7 @@ const Project = () => {
         </div>
             <Eye isPlay={false} isClass={true} className={'flex gap-[2vw] top-[25%]'}/>
 
-        <Button href={'https://calendly.com/zhassan2312/project-discussion,_blank'} className={'pl-8 pr-16 lg:pl-[2vw] lg:pr-[4vw] py-[1vw] '} text={'Start Project'} isWhite={false} />
+        <Button href={'https://calendly.com/zhassan2312/project-discussion'} className={'pl-8 pr-16 lg:pl-[2vw] lg:pr-[4vw] py-[1vw] '} text={'Start Project'} isWhite={false} />
         <h1 className='text-[3vw] leading-none text-zinc-900 tracking-tighter font-poppins font-extralight uppercase'>OR</h1>
         <OutlineButton href={'mailto: zhassan2312@gmail.com'} className={'pl-8 pr-16 lg:pl-[2vw] lg:pr-[4vw] py-[1vw]'} text={'Drop me a Mail'} />
     </div>

@@ -20,7 +20,7 @@ const App = () => {
       el: scrollRef.current,
       smooth: true,
       smoothMobile: true,
-      lerp: 0.05, // Adjust this value to control the scroll speed (lower value = slower scroll)
+      lerp: 0, // Adjust this value to control the scroll speed (lower value = slower scroll)
     });
 
     return () => {

@@ -12,11 +12,11 @@ const PreLoader = ({ onComplete }) => {
 
   return (
     <div className="preloader fixed inset-0 z-[5000] flex flex-col items-center justify-between bg-white overflow-hidden">
-      <div className="absolute top-[5vh] text-center text-md text-black font-[Poppins]">
+      <div className="absolute top-[5vh] text-center text-md text-black font-medium font-[Poppins]">
         Portfolio @2024
       </div>
 
-      <div className="absolute top-[45vh] texts-container flex gap-3 items-center justify-center text-lg text-black font-[Poppins] opacity-0">
+      <div className="absolute top-[45vh] texts-container flex gap-3 items-center justify-center text-[2vw] text-black font-[Poppins] opacity-0">
         <span className="font-bold text-nowrap text-[#017263]">Zohaib Hassan</span>
         <span>is</span>
         <span>a</span>
