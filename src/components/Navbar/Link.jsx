@@ -116,6 +116,7 @@ const Link = ({ isBlack, text, className, href, onClick, isNavbar }) => {
       href={href}
       className={`${className} cursor-pointer relative leading-none text-md lg:text-[1vw] xl:text-[1vw] overflow-hidden`}  // Base styles
       onClick={onClick}
+      target='_blank'
       onMouseEnter={() => setHover(true)}   // Hover in
       onMouseLeave={() => setHover(false)}  // Hover out
     >

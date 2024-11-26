@@ -59,7 +59,7 @@ const Navbar = () => {
               key={index} 
               isNavbar={true} 
               text={link} 
-              href={'#'} 
+              href={`${index==4 ? 'calendly.com/zhassan2312/project-discussion' : `#${link.toLowerCase()}`}`} 
               className={`font-regular mx-[2vw] ${index === 4 ? 'ml-[16vw]' : ''}`}
             />
           ))}
