@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Types from './Types';
 
-const Card = ({ image, text, types, left,link }) => {
+const Card = ({ image, text, types, left, link }) => {
   const [hover, setHover] = useState(false);
   const h1Ref = useRef(null);
 
@@ -25,7 +25,7 @@ const Card = ({ image, text, types, left,link }) => {
 
   return (
     <div
-      className='cardContainer cursor-pointer relative w-full py-6 lg:py-[1vw]'
+       className={`cardContainer cursor-pointer relative w-full py-6 lg:py-[1vw] z-10 ${hover ? '!z-[60]' : ''}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
@@ -36,7 +36,8 @@ const Card = ({ image, text, types, left,link }) => {
     >
       <h1
         ref={h1Ref}
-        className={`overflow-hidden text-[#CDEA68] uppercase font-bold absolute ${left ? 'left-1/2 -translate-x-1/2 lg:left-full lg:-translate-x-1/2 ' : 'right-1/2 translate-x-1/2 lg:right-full lg:translate-x-1/2'} leading-none top-1/2 -translate-y-1/2 font-grotesk text-[8vw] z-10 text-nowrap`}
+        className={`absolute z-30 overflow-hidden text-[#CDEA68] uppercase font-bold ${left ? 'left-1/2 -translate-x-1/2 lg:left-full lg:-translate-x-1/2 ' : 'right-1/2 translate-x-1/2 lg:right-full lg:translate-x-1/2'} leading-none top-1/2 -translate-y-1/2 font-grotesk text-[8vw] text-nowrap`}
+      
       >
         {text.split('').map((letter, index) => (
           <span key={index} className="inline-block">{letter}</span>

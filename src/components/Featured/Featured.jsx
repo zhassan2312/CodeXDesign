@@ -53,12 +53,11 @@ const Featured = () => {
         </h1>
       </div>
       <div className='line h-[1px] lg:h-[0.15vw] bg-zinc-600 w-full my-10 lg:my-[2vw]'></div>
-      <div className='cards px-10 lg:px-[2vw] lg:gap-[1vw] gap-10 w-full grid grid-cols-1 md:grid-cols-2 '>
+      <div className='cards px-10 lg:px-[2vw] lg:gap-[1vw] gap-10 w-full grid grid-cols-1 md:grid-cols-2 relative'>
         {displayedPortfolio.map((item, idx) => (
-          <div
+          <div 
             key={item.name + idx}
-            className={`transition-all duration-500 ease-in-out transform ${showAll ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} ${idx < 4 || showAll ? 'opacity-100 translate-y-0' : ''}`}
-            style={{ transitionDelay: `${idx * 80}ms` }}
+            className="relative" // Add relative positioning
           >
             <Card
               image={item.image}

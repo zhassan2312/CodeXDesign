@@ -5,7 +5,7 @@ const Types = ({types}) => {
     
 
   return (
-    <div className='flex items-center gap-3 lg:gap-5 flex-wrap'>
+    <div className='flex items-center gap-2 flex-wrap'>
           {types.map((type, index) => (
             <MiniButton text={type} key={index} className={'text-sm lg:text-[1vw] lg:px-[1vw] lg:py-[0.8vw] px-4 py-1'}  />
           ))}
