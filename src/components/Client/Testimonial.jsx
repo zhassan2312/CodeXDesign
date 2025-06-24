@@ -8,7 +8,7 @@ const Testimonial = ({ testimonialText, types, companyName, personName, expanded
     <div
       ref={containerRef}
       className={`testimonialContainer w-full border-y border-zinc-500 transition-all duration-500 ease-in-out overflow-hidden relative bg-zinc-900
-        ${expanded ? 'max-h-none opacity-100 py-[6vw] md:py-[3vw]' : 'max-h-[70px] opacity-80 py-[2vw] md:py-[1vw]'}
+        ${expanded ? 'max-h-none opacity-100 py-[6vw] md:py-[3vw]' : 'max-h-[20vh] opacity-80 py-[2vw] md:py-[1vw]'}
       `}
     >
       <div className="w-full flex flex-row justify-between items-center px-[3vw]">
