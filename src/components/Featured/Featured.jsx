@@ -71,7 +71,7 @@ const Featured = () => {
         ))}
       </div>
         <Button
-        className={'pl-8 pr-16 lg:pl-[2vw] lg:pr-[4vw] py-[1vw] mt-[3vw] mx-auto'}
+        className={'mt-[96px] pl-8 pr-16 lg:pl-[2vw] lg:pr-[4vw] py-[1vw] mx-auto'}
         text={showAll ? 'Show Less' : 'View All Case Studies'}
         isWhite={true}
         onClick={() => setShowAll((prev) => !prev)}
