@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { logo1 } from '../../utils/index';
+import assets from '../../utils/assets';
 import { navBarLinks } from '../../constants';
 import { MdMenu } from 'react-icons/md';
 import Dropdown from './Dropdown';
 import Link from './Link';
 import { gsap } from 'gsap';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const navigate=useNavigate()
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -48,26 +50,35 @@ const Navbar = () => {
       {/* Navbar content aligned with flexbox */}
       <div className='flex justify-between items-center'>
         {/* Logo at the leftmost side */}
-        <div className='logo'>
-          <img src={logo1} alt="Logo" className='w-[8vw]' />
+        <div className='logo' onClick={()=>navigate()}>
+          <img src={assets.logo1} alt="Logo" className='w-[10vw] md:w-[10vw] hover:scale-125 duration-500 transition-transform ease-in-out cursor-pointer' />
         </div>
 
         {/* Links - Hidden on smaller screens */}
         <div className='hidden lg:flex items-center'>
           {navBarLinks.map((link, index) => (
-            <Link 
-              key={index} 
-              isNavbar={true} 
-              text={link} 
-              href={`${index==4 ? 'calendly.com/zhassan2312/project-discussion' : `#${link.toLowerCase()}`}`} 
-              className={`font-regular mx-[2vw] ${index === 4 ? 'ml-[16vw]' : ''}`}
+            <Link
+              key={index}
+              isNavbar={true}
+              text={link}
+              href={
+                index === 0
+                  ? '#featured'
+                  : index === 1
+                  ? '#about'
+                  : index === 2
+                  ? 'https://www.calendly.com/zhassan2312/project-discussion'
+                  : ''
+              }
+              target={`${index === 2 ? '_blank' : ''}`}
+              className={`font-regular mx-[2vw] ${index === 2 ? 'ml-[35vw]' : ''}`}
             />
           ))}
         </div>
 
         {/* Menu icon - Visible on smaller screens */}
         <div className='lg:hidden'>
-          <MdMenu className='text-[5vw] cursor-pointer' onClick={toggleDropdown} />
+          <MdMenu className='text-[5vw] cursor-pointer hover:scale-125 duration-500 transition-transform ease-in-out ' onClick={toggleDropdown} />
         </div>
       </div>
 

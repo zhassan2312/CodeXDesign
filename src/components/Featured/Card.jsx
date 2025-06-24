@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Types from './Types';
 
-const Card = ({ image, text, types, left }) => {
+const Card = ({ image, text, types, left,link }) => {
   const [hover, setHover] = useState(false);
   const h1Ref = useRef(null);
 
@@ -25,9 +25,14 @@ const Card = ({ image, text, types, left }) => {
 
   return (
     <div
-      className='cardContainer relative w-full lg:w-1/2 py-6 lg:py-[1vw]'
+      className='cardContainer cursor-pointer relative w-full py-6 lg:py-[1vw]'
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => {
+        if (link) {
+          window.open(link, '_blank');
+        }
+      }}
     >
       <h1
         ref={h1Ref}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-const Link = ({ isBlack, text, className, href, onClick, isNavbar }) => {
+const Link = ({ isBlack, text, className, href, onClick, isNavbar,target }) => {
   const [hover, setHover] = useState(false);
   const underlineRef = useRef(null);
   const textFlipRef = useRef(null);
@@ -116,7 +116,7 @@ const Link = ({ isBlack, text, className, href, onClick, isNavbar }) => {
       href={href}
       className={`${className} cursor-pointer relative leading-none text-md lg:text-[1vw] xl:text-[1vw] overflow-hidden`}  // Base styles
       onClick={onClick}
-      target='_blank'
+      target={target}
       onMouseEnter={() => setHover(true)}   // Hover in
       onMouseLeave={() => setHover(false)}  // Hover out
     >

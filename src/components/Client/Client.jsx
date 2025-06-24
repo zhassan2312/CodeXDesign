@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { testimonialText } from '../../constants'
 import Testimonial from './Testimonial'
+import testimonials from '../../utils/testimonials'
 import Card from './Card'
 const Client = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -17,22 +18,20 @@ const Client = () => {
                 Client's Reviews
             </h1>
             <div className='flex flex-col w-full'>
-              <Testimonial
-                testimonialText={testimonialText}
-                types={['Youtube', 'Sales']}
-                companyName={"Re Design"}
-                personName={'Jesse Yao'}
-                expanded={expandedIndex === 0}
-                onToggle={() => handleToggle(0)}
-              />
-              <Testimonial
-                testimonialText={testimonialText}
-                types={['UI Design', 'UX Research']}
-                companyName={"kneems"}
-                personName={'Anees'}
-                expanded={expandedIndex === 1}
-                onToggle={() => handleToggle(1)}
-              />
+              {testimonials.map((item, idx) => (
+                <Testimonial
+                  key={idx}
+                  testimonialText={item.feedback}
+                  types={item.services}
+                  companyName={item.company}
+                  personName={item.name}
+                  expanded={expandedIndex === idx}
+                  onToggle={() => handleToggle(idx)}
+                  companylink={item.companylink}
+                  profilelink={item.profilelink}
+                  img={item.image}
+                />
+              ))}
             </div>
 
             <Card />

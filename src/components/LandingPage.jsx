@@ -3,6 +3,7 @@ import { FaArrowUpLong } from 'react-icons/fa6';
 import { heroSectionText, heroSectionText1 } from '../constants';
 import MiniButton from './buttons/MiniButton';
 import { motion } from 'framer-motion';
+import assets from '../utils/assets';
 
 const LandingPage = () => {
   
@@ -22,7 +23,13 @@ const LandingPage = () => {
                     initial={{ width: '0' }} 
                     animate={{ width: '8vw' }} 
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }} 
-                    className='mr-[0.5vw] rounded-md h-[4.5vw] top-[0.8vw] relative bg-green-500'
+                    className='mr-[0.5vw] rounded-md h-[4.5vw] top-[0.8vw] relative'
+                    style={{
+                      backgroundImage: `url(${assets.feary})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
                   ></motion.div>
                 }
                 <h1 className='pt-[2vw] text-nowrap -mb-[1vw] uppercase text-[6vw] tracking-tighter leading-[4.5vw] font-poppins font-bold'>
@@ -42,7 +49,7 @@ const LandingPage = () => {
         ))}
         <div className="start flex items-center gap-3 lg:gap-[1vw]">
           <MiniButton onClick={'https://calendly.com/zhassan2312/project-discussion'} text={'Start Project'} className={'text-sm lg:text-[1vw] lg:px-[1vw] lg:py-[0.8vw] px-4 py-1'} />
-          <MiniButton text={<FaArrowUpLong className="w-5 h-5 lg:w-[1vw] lg:h-[1vw] rotate-[45deg]" />} className={'px-2 py-2 lg:px-[0.5vw] lg:py-[0.5vw] leading-none'} />
+          <MiniButton onClick={"https://www.upwork.com/freelancers/~01ed8e41a9e6f5d90e"} text={<FaArrowUpLong className="w-5 h-5 lg:w-[1vw] lg:h-[1vw] rotate-[45deg]" />} className={'px-2 py-2 lg:px-[0.5vw] lg:py-[0.5vw] leading-none'} />
         </div>
       </div>
     </div>

@@ -61,7 +61,7 @@ const Button = ({href,onClick, text, isWhite, className }) => {
       target='_blank'
       onClick={onClick}
       ref={buttonRef}
-      className={`flex gap-5 items-center ${className} ${isWhite ? 'bg-white text-zinc-900' : 'bg-zinc-900 text-white'} rounded-full justify-center relative bg-[length:100%_200%] bg-[position:0%_100%]`}
+      className={`flex cursor-pointer gap-5 items-center ${className} ${isWhite ? 'bg-white text-zinc-900' : 'bg-zinc-900 text-white'} rounded-full justify-center relative bg-[length:100%_200%] bg-[position:0%_100%]`}
     >
       <span className='btn__text text-nowrap text-md lg:text-[1vw]'>{text}</span>
       <div ref={iconRef} className={`btn__icon w-3 h-3 lg:w-[1vw] lg:h-[1vw] ${isWhite ? 'bg-zinc-900' : 'bg-zinc-100'} rounded-full flex items-center justify-center absolute right-4 lg:right-[1vw]`}>
